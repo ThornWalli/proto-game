@@ -1,0 +1,19 @@
+[{
+  "name": "OpenSans",
+  "path": "assets/fonts/OpenSans/Regular/OpenSans-Regular",
+  "style": "normal",
+  "weight": "400",
+  "testString": "ABCD"
+},{
+  "name": "OpenSans",
+  "path": "assets/fonts/OpenSans/Semibold/OpenSans-Semibold",
+  "style": "normal",
+  "weight": "500",
+  "testString": "ABCD"
+},{
+  "name": "OpenSans",
+  "path": "assets/fonts/OpenSans/BoldItalic/OpenSans-BoldItalic",
+  "style": "italic",
+  "weight": "700",
+  "testString": "ABCD"
+}]

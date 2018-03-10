@@ -1,0 +1,6 @@
+---
+units: []
+---
+{{#mixin "organisms/dialog" this partial-name="organisms/dialog/unit-selection" controller-name="./partials/organisms/dialog/UnitSelection"}}
+  {{#content "content"}}{{{mixin "atoms/list" units hook="unitSelectionItems" class="list--buttons list--scroll"}}}{{/content}}
+{{/mixin}}

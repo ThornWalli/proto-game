@@ -1,0 +1,35 @@
+.partial[data-partial="organisms/dialog"],
+.partial[data-partial^="organisms/dialog/"] {
+  position: absolute;
+  border: solid #333;
+  background: rgba(0, 0, 0, 0.4);
+  border-width: 4px;
+  box-sizing: content-box;
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3333);
+
+  &.dialog-position--left {
+    left: 0;
+  }
+
+  &.dialog-position--horizontal-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.dialog-position--vertical-center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.dialog-position--top {
+    top: 0;
+  }
+
+  &.dialog-position--right {
+    right: 0;
+  }
+
+  &.dialog-position--bottom {
+    bottom: 0;
+  }
+}

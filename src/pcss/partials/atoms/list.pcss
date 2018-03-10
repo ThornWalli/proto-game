@@ -1,0 +1,98 @@
+.partial[data-partial="atoms/list"] {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+
+  &.list--small-text {
+    li {
+      @mixin clearfix;
+
+      margin: 5px 0;
+      padding: 0 5px;
+      font-size: 10px;
+      color: $color_green;
+
+      span {
+        display: block;
+        float: left;
+        width: 80%;
+
+        &:first-child {
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  &.list--small-list {
+    li {
+      font-size: 10px;
+      color: $color_white;
+    }
+  }
+
+  &.list--buttons {
+    li {
+      margin: 5px;
+      background: $color_green;
+      font-size: 12px;
+      padding: 5px;
+      position: relative;
+      cursor: pointer;
+
+      > span {
+        display: block;
+        position: relative;
+        text-align: center;
+        z-index: 2;
+        transition: color 150ms linear;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $color_black;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 150ms linear;
+      }
+
+      &.js--selected,
+      &:hover {
+        > span {
+          color: $color_white;
+        }
+
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+  &.list--scroll {
+    height: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color_green;
+      outline: none;
+    }
+  }
+}

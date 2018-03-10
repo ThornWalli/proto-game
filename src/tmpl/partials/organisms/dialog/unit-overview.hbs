@@ -1,0 +1,20 @@
+---
+unit-type-select:
+  options:
+    - 'unit-1'
+    - 'unit-2'
+    - 'unit-3'
+units: []
+---
+{{#mixin "organisms/dialog" this partial-name="organisms/dialog/unit-overview" controller-name="./partials/organisms/dialog/UnitOverview" }}
+  {{#content "content"}}
+    {{#mixin "atoms/form" this}}
+      {{#content "content"}}
+        <div>
+          <label>Unit-Type:</label>{{{mixin "atoms/input/dropdown" unit-type-select hook="unitOverviewUnitTypeSelect" }}}
+        </div>
+        </form>
+      {{/content}}
+    {{/mixin}}
+    {{{mixin "atoms/list" units hook="unitOverviewItems" class="list--small-list list--scroll"}}}{{/content}}
+{{/mixin}}

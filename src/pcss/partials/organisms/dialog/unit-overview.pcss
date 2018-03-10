@@ -1,0 +1,24 @@
+.partial[data-partial="organisms/dialog/unit-overview"] {
+  width: 160px;
+  height: 200px;
+
+  li {
+    span {
+      display: block;
+      float: left;
+      border: solid $color_green 1px;
+      border-left-width: 0;
+      padding: 2px;
+      box-sizing: border-box;
+
+      &:first-child {
+        width: 48px;
+        border-left-width: 1px;
+      }
+
+      &:last-child {
+        width: calc(100% - 48px - 4px);
+      }
+    }
+  }
+}
